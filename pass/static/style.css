@@ -1,0 +1,100 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    background-color: rgb(51, 43, 43);
+    color:white;
+}
+a{
+text-decoration:none;
+color:white;
+cursor:pointer;
+}
+a:hover{
+    color:rgb(204, 47, 47) ;
+}
+input{
+    width:67%;
+    margin:10px auto;
+    padding:5px;
+    border:none;
+}
+input:focus{
+    border:solid 1px red; 
+}
+header{
+    box-shadow:black;
+}
+.not{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding:20px 30px;
+    align-items:center;
+}
+.okey{
+    list-style-type:none;
+    display:inline-flex;
+    margin-left:60%;
+}
+.yesss{
+    margin:5px;
+}
+ 
+@media screen and (max-width:560px){
+    header nav{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    
+}
+footer{
+    position:fixed;
+    left:0;
+    bottom:0;
+    padding:25px;
+    width:100%;
+}
+.modal-wrapper{
+    width:70%;
+    height:70%;
+    display:flex;
+    justify-content:center;
+    position:fixed;
+    align-items:center;
+}
+    .modem-wrapper{
+        width:70%;
+        height:70%;
+        display:flex;
+        justify-content:center;
+        position:fixed;
+        align-items:center;
+}
+.modal{
+    min-width:400px;
+    min-height:400px;
+    padding:40px;
+    margin-left:0%;
+    margin-top:50%;
+}
+.modem{
+    min-width:400px;
+    min-height:400px;
+    padding:40px;
+    margin-left:135%;
+}
+.password-modal{
+    display:flex;
+    justify-content:center;
+    margin-top:20%;
+    padding:20px;
+    text-align:center;
+    flex-direction:column;
+}
+
+
+

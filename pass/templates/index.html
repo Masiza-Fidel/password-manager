@@ -1,0 +1,82 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password manager</title>
+    <link rel="stylesheet" href='{%static "style.css"%}'>
+
+</head>
+
+<body>
+<div>
+    <div>
+    <header class="sawa">
+        <nav class="not">
+            <li class="okey">
+                <ul class="yesss"><a href="">Home</a></ul>
+                <ul class="yesss"><a href="">LogIn</a></ul>
+                <ul class="yesss"><a href="">SignUp</a></ul>
+                <ul class="yesss"><a href="">View</a></ul>
+
+            </li>
+        </nav>
+    </header>
+    </div>
+    {%if messages%}
+
+    <div class="messages" style="text-align: center;">
+{%for message in messages%}
+<p>
+    {%if message.tags =='error'%}
+    <h3>please try again to log in </h3>
+    {%else%}
+    <h3>kudoss!</h3>
+    {%endif%}
+    &nbsp;{{message}}
+</p>
+{%end for%}
+    </div>
+{%endif%}
+
+<div class="modem-wrapper">
+    <div class="modal" id="logIn-modal">
+       <form action=" ">
+           <h2>Log In</h2>
+           <input type="text" name="username" placeholder="username">
+           <input type="password" name="password" placeholder="enter password">
+           <input type="submit" value="log in">
+
+       </form>
+    </div>
+  </div>
+ <div class="modal-wrapper">
+        <div class="modem" id="signup-modal">
+         <form action=" ." role="form" method="POST">
+            {% csrf_token%}
+            <h2>Sign Up</h2>
+            <input type="text" name="username" placeholder="username">
+            <input type="email" name="email" placeholder="email">
+            <input type="pasword" name="password" placeholder="password">
+            <input type="pasword2" name="password2" placeholder="confirm password">
+
+           <input type="submit" value="Sign-Up" name="signup-form ">
+         </form>
+        </div>
+     </div>
+<div>
+    <div class="password-modal">
+        <h2>Url or Name</h2>
+        <input type="email" name="email" placeholder="email">
+        <input type="pasword" name="password" value="password">
+
+    </div>
+    <footer> <a href="">Link to the project</a>
+        
+    </footer>
+</div>
+</div>
+</body>
+</html>
